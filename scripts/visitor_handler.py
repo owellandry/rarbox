@@ -1,6 +1,7 @@
+# scripts/visitor_handler.py
+
 from colorama import Fore, Style, init
 from config.firebase_config import initialize_firebase
-from google.cloud import firestore
 
 # Inicializar colorama
 init(autoreset=True)
@@ -26,7 +27,3 @@ def get_visitor_data():
             return visitor_name, visitor_relation
         else:
             print(Fore.RED + "\nEl nombre no puede estar vacío. Inténtalo de nuevo." + Style.RESET_ALL)
-
-if __name__ == "__main__":
-    visitor_name, visitor_relation = get_visitor_data()
-    register_visitor(visitor_name, visitor_relation)
