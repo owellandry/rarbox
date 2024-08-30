@@ -6,13 +6,16 @@ def recognize_audio():
     recognizer = sr.Recognizer()
 
     with sr.Microphone() as source:
+        print("Ajustando el micrófono...")  # Mensaje de ajuste
+        recognizer.adjust_for_ambient_noise(source, duration=5)  # Ajustar para el ruido ambiental
         print("Listening...")
-        audio = recognizer.listen(source)
-    
-    try:
-        text = recognizer.recognize_google(audio)
-        return text
-    except sr.UnknownValueError:
-        return "Sorry, I could not understand the audio."
-    except sr.RequestError:
-        return "Sorry, there was an error with the request."
+        try:
+            audio = recognizer.listen(source, timeout=10)  # Tiempo de espera para la captura
+            text = recognizer.recognize_google(audio)
+            return text
+        except sr.WaitTimeoutError:
+            return "El tiempo de espera para la captura de audio se agotó."
+        except sr.UnknownValueError:
+            return "Lo siento, no pude entender el audio."
+        except sr.RequestError:
+            return "Lo siento, hubo un error con la solicitud."
