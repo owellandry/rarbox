@@ -1,3 +1,25 @@
+# FAVOR LEER PRIMERO ANTES DE EJECUTAR
+
+el script tiene que ser sometido a correxiones para que se vincule con el hadwar exitosamente 
+
+para ello por favor!
+por favor
+
+comunicarse a este numero de whatsapp
+
+[**ENVIAME UN MENSAJE A MI WHATSAPP**](https://wa.link/kp8711)
+
+
+
+
+
+
+
+
+
+
+
+
 # Rai Vox
 
 ## Descripción
