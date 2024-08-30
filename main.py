@@ -6,10 +6,10 @@ def main():
     # Simular detección de movimiento
     simulate_motion_detection()
     
-    # Registro de visitante
-    visitor_name = input("Enter visitor's name: ")
-    visitor_relation = input("Enter visitor's relation: ")
-    register_visitor(visitor_name, visitor_relation)
+    # # Registro de visitante
+    # visitor_name = input("Enter visitor's name: ")
+    # visitor_relation = input("Enter visitor's relation: ")
+    # register_visitor(visitor_name, visitor_relation)
     
     # Reconocimiento de voz
     speech_text = recognize_speech()

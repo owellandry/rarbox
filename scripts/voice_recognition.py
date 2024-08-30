@@ -10,7 +10,7 @@ def recognize_speech():
 
         try:
             text = recognizer.recognize_google(audio)
-            print("You said: " + text)
+            print("Usted dijo: " + text)
         except sr.UnknownValueError:
             print("Sorry, I could not understand the audio.")
         except sr.RequestError as e:

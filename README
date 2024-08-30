@@ -18,6 +18,8 @@ sudo apt install python3.8-venv
 
 source venv/bin/activate
 
+desactivate
+
 6
 
 sudo apt-get install pulseaudio
