@@ -18,3 +18,4 @@ Rai Vox es un sistema basado en Raspberry Pi para detectar visitantes, registrar
    python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
+# rarbox
