@@ -1,2 +1,26 @@
 Paso numero uno
 
+sudo apt install python3-virtualenv
+
+2
+
+virtualenv -p python3 venv
+
+3
+
+python3 -m venv venv
+
+4
+
+sudo apt install python3.8-venv
+
+5
+
+source venv/bin/activate
+
+6
+
+sudo apt-get install pulseaudio
+
+
+sudo apt-get install alsa-utils

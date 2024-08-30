@@ -1,21 +1,19 @@
 import speech_recognition as sr
 
-recognizer = sr.Recognizer()
-
 def recognize_speech():
-    with sr.Microphone() as source:
+    recognizer = sr.Recognizer()
+    # Especifica el índice del dispositivo que encontraste en la lista (generalmente será 0)
+    with sr.Microphone(device_index=0) as source:
         print("Listening...")
+        recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source)
+
         try:
             text = recognizer.recognize_google(audio)
-            print(f"Recognized text: {text}")
-            return text
+            print("You said: " + text)
         except sr.UnknownValueError:
             print("Sorry, I could not understand the audio.")
-            return None
-        except sr.RequestError:
-            print("Sorry, there was an error with the speech recognition service.")
-            return None
+        except sr.RequestError as e:
+            print(f"Could not request results from Google Speech Recognition service; {e}")
 
-if __name__ == "__main__":
-    recognize_speech()
+recognize_speech()
